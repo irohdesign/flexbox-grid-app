@@ -5,7 +5,8 @@ import Grid from "./components/pages/grid/grid-container.js";
 import Fused from "./components/pages/fused.js";
 import Flex from "./components/pages/flexbox/flex-container.js";
 import Nav from "./components/containers/nav.js";
-import Wrapper from "./components/containers/wrapper.js";
+import Header from "./components/containers/header.js";
+import "./style.css";
 
 
 class App extends Component {
@@ -13,13 +14,12 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Header/>
           <Nav />
-          <Wrapper>
             <Route exact path = "/" component={Intro}/>
             <Route exact path = "/grid" component={Grid}/>
-            <Route exact path = "/flex" component={Flex}/>
+            <Route path = "/flex" component={Flex}/>
             <Route exact path = "/fused" component={Fused}/>
-          </Wrapper>
         </div>
       </Router>
     );
