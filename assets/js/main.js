@@ -11,13 +11,15 @@ function flex() {
     $(tutorial).append(header);
 
     // sidebar
-    let sidebar = $("<div>").attr("class", "sidebar");
+    let sidebar = $("<div>");
+    let sideList = $("<ul>").attr("class", "sidebar");
     let sidelinks = ["Navigation Bars", "Sidebars", "Vertical Alignment", "Spacing"];
     $.each(sidelinks, function () {
         var link = $("<li>").text(this);
-        sidebar.append(link);
+        sideList.append(link);
     });
-
+    
+    $(sidebar).html(sideList);
     $(tutorial).append(sidebar);
 
 
