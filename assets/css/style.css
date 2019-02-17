@@ -1,0 +1,89 @@
+/* colors */
+
+/* 
+
+medium aquamarine : #59c9a5
+sea foam green : #b9e3c6
+dogwood rose : #d81e5b
+japanese indigo : #23395b
+canard : #fffd98
+
+*/
+
+/* global */
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+#grid, #flexbox, #rec {
+    display: none;
+}
+
+h1 {
+    font-family: 'Staatliches', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* nav */
+
+header {
+    background: #b9e3c6;
+    margin: 0;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+#top h1 {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+nav {
+    width: 80%;
+    margin: auto;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    padding: 0;
+}
+
+nav button {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    padding: 5px 30px;
+    background: transparent;
+    color: #657C6C;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+.active {
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+/* intro */
+
+
+
+/* tutorial */
+
+#tutorial h1 {
+    text-align: center;
+}
+
