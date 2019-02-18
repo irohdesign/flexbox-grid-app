@@ -12,12 +12,25 @@ function sidePopulate(sidelinks) {
     let sideList = $("<ul>").attr("class", "sidebar");
     
     $.each(sidelinks, function () {
-        var link = $("<li>").text(this);
-        sideList.append(link);
+        let linkItem = $("<li>").text(this);
+        let href = (linkItem.text());
+        linkItem.html(`<a href="${href}">${href}</a>`);
+        sideList.append(linkItem);
     });
     
     $(sidebar).html(sideList);
     $(tutorial).append(sidebar);
+}
+
+function tableCreator(tableList, containerClass) {
+    let tableCont = $("<div>").attr("src", `${containerClass}`);
+
+    for(let i = 0; i < tableList.length; i++) {
+        let tableItem = $("<div>").attr("value", tableList[i]).text(tableList[i]);
+        tableCont.append(tableItem);
+    }
+
+    $(tutorial).append(tableCont);
 }
 
 function flex() {
@@ -31,7 +44,10 @@ function flex() {
     sidePopulate(sidelinks);
 
     // main section
-    
+    let tableList = [1, 2, 3, 4, 5, 6];
+    let containerClass = "flex-container";
+
+    tableCreator(tableList, containerClass);
 
     // demo
 
