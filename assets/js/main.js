@@ -1,19 +1,16 @@
 let header = $("<h1>");
 let tutorial = $("#tutorial");
+let sidelinks = [];
 
-function flex() {
+function reset() {
     event.preventDefault();
     $(tutorial).html("");
+}
 
-    header.text("Flexbox");
-
-    $(tutorial).css("background-color", "yellow");
-    $(tutorial).append(header);
-
-    // sidebar
+function sidePopulate(sidelinks) {
     let sidebar = $("<div>");
     let sideList = $("<ul>").attr("class", "sidebar");
-    let sidelinks = ["Navigation Bars", "Sidebars", "Vertical Alignment", "Spacing"];
+    
     $.each(sidelinks, function () {
         var link = $("<li>").text(this);
         sideList.append(link);
@@ -21,9 +18,20 @@ function flex() {
     
     $(sidebar).html(sideList);
     $(tutorial).append(sidebar);
+}
 
+function flex() {
+    reset();
+    header.text("Flexbox");
+
+    $(tutorial).css("background-color", "yellow");
+    $(tutorial).append(header);
+
+    let sidelinks = ["Navigation Bars", "Sidebars", "Vertical Alignment", "Spacing"];
+    sidePopulate(sidelinks);
 
     // main section
+    
 
     // demo
 
@@ -31,11 +39,14 @@ function flex() {
 }
 
 function recommended() {
-    $("#tutorial").html("hey it's me");
+    reset();
+    header.text("Recommendations");
 
 }
 
 function grid() {
+    reset();
+    header.text("CSS Grid");
 
 }
 
