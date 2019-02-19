@@ -15,10 +15,8 @@ canard : #fffd98
 .container {
     max-width: 1250px;
     margin: auto;
-}
-
-#grid, #flexbox, #rec {
-    display: none;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 
 h1 {
@@ -26,6 +24,10 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2px;
+}
+
+ul {
+    list-style: none;
 }
 
 /* nav */
@@ -39,51 +41,115 @@ header {
 
 #top h1 {
     font-size: 80px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
-nav {
+button {
+    padding: 8px 20px;
+    margin: auto 5px;
+    font-size: 14px;
+    border: none;
+    background: #87b395;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background: #4bad8e;
+}
+
+/* illustration */
+
+#illustration {
+    height: 350px;
+    margin: 15px auto;
+    background: #59c9a5;
+}
+
+#outerbox {
     width: 80%;
+    position: relative;
+    top: 35px;
+    border: solid 1px white;
+    height: 280px;
     margin: auto;
+    display: grid;
+    text-align: center;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
-#button-container {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-    margin: auto;
+#outerbox ul {
+    margin: 0;
     padding: 0;
 }
 
-nav button {
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
-    border: none;
-    padding: 5px 30px;
-    background: transparent;
-    color: #657C6C;
-    border-radius: 5px;
+#outerbox h2 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 40px;
 }
 
-nav button:hover {
-    cursor: pointer;
-    background: white;
-    color: black;
+/* comparison */
+
+#comparison {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.active {
-    cursor: pointer;
-    background: white;
-    color: black;
+#comp-list {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-/* intro */
+/* flexbox */
 
+#flexbox {
+    padding: 30px;
+    margin: 30px auto;
+}
 
+#flex-example {
+    display: flex; 
+    justify-content: center;
+}
 
-/* tutorial */
+#flex-example div {
+    padding: 10px 30px;
+    background: #ddd;
+    border: solid 2px white;
+}
 
-#tutorial h1 {
+/* grid */
+
+#grid {
+    padding: 30px;
+}
+
+#grid-example {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 60%;
+    margin: auto;
+}
+
+#grid-example div {
+    padding: 10px 5px;
+    background: #ddd;
+    border: solid 2px white;
+}
+
+/* footer */
+
+footer {
+    background: #b9e3c6;
+    padding: 10px;
     text-align: center;
 }
 
+footer h2 {
+    font-family: 'Staatliches', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}

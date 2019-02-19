@@ -1,5 +1,6 @@
 let tutorial = $("#tutorial");
-
+let flex = $("#flex-example");
+let grid = $("#grid-example");
 
 
 $(".trigger").on("click", function() {
@@ -11,16 +12,21 @@ $(".trigger").on("click", function() {
     // flexbox changes
     switch (category) {
         case "justify":
-            $("#flex-example").css("justify-content", `${change}`);
+            $(flex).css("justify-content", `${change}`).css("width", "auto");
             break;
         case "dimension":
-            console.log("Another dimension!");
+            $(flex).css("flex-direction", `${change}`).css("width", "auto");
             break;
         case "flexibility":
-            console.log("Responsive");
+            $(flex).css("flex-wrap", `${change}`).css("width", "30%").css("margin", "auto");
+            break;
+        case "template-columns":
+            $(grid).css("grid-template-columns", `${change}`);
+            break;
+        case "template-rows":
+            $(grid).css("grid-template-rows", `${change}`);
             break;
     }
-
 
 })
 

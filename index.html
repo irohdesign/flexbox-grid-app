@@ -11,19 +11,117 @@
 
     <header id="top">
         <h1>Grid vs Flexbox</h1>
-
-        <nav>
-                <div id="button-container">
-                    <button id="grid-button" value="grid" class="guide">CSS Grid</button>
-                    <button id="fusion-button" value="rec" class="guide">Recommendations</button>
-                    <button id="flex-button" value="flex" class="guide">Flexbox</button>
-                </div>
-        </nav>
     </header>
 
-    
-    <main id="tutorial" class="container"></main>
-    
+
+    <div id="illustration">
+        <div id="outerbox">
+            <section id="comparison">
+            <div id="comp-list">
+                <ul>
+                    <h2>Flexbox</h2>
+                    <li>One-dimensional Layout</li>
+                    <li>Allows items to grow and shrink</li>
+                </ul>
+                <ul>
+                    <h2>Grid</h2>
+                    <li>Two-dimensional Layout</li>
+                    <li>Great replacement for tables</li>
+                </ul>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <main id="tutorial" class="container">
+        
+
+        <section id="grid">
+            <h1>CSS Grid</h1>
+
+            <div id="grid-example">
+                <div>Darryl</div>
+                <div>Michael</div>
+                <div>Dwight</div>
+                <div>Angela</div>
+                <div>Pam</div>
+                <div>Jim</div>
+                <div>Andy</div>
+                <div>Stanley</div>
+                <div>Kelly</div>
+            </div>
+
+            <div id="template-columns">
+                <h2>Set number and width of columns</h2>
+                <button class="trigger" value="auto auto">2 Columns</button>
+                <button class="trigger" value="auto auto auto">3 Columns</button>
+                <button class="trigger" value="auto auto auto auto">4 Columns</button>
+            </div>
+
+            <div id="template-rows">
+                <h2>Set the height of grid rows</h2>
+                <button class="trigger" value="auto">Equal height</button>
+                <button class="trigger" value="40px 80px 40px">Unequal height</button>
+            </div>
+
+            <div class="concl">
+                    <h2>Layout First</h2>
+                    <p>If you need your content to fit within a personalized and/or specific layout, use Grid.</p>
+                    <p>Grid allows you to control the layout by both row and column. If you need multiple rows to line-up with each other, or you find yourself hard-coding any of flexbox's functionality away, you should switch to Grid.</p>
+            </div>
+
+        </section>
+
+        <section id="flexbox">
+            <h1>Flexbox</h1>
+
+            <div id="flex-example">
+                <div>Tokyo</div>
+                <div>Shanghai</div>
+                <div>Brussels</div>
+                <div>Vancouver</div>
+                <div>Buenos Aires</div>
+                <div>Sydney</div>
+            </div>
+
+            <div id="justify">
+                <h2>Easily rearrange content</h2>
+                <button class="trigger" value="space-around">Space-Around</button>
+                <button class="trigger" value="space-between">Space-Between</button>
+                <button class="trigger" value="center">Center</button>
+            </div>
+
+            <div id="dimension">
+                <h2>Change the direction</h2>
+                <button class="trigger" value="row">Row</button>
+                <button class="trigger" value="column">Column</button>
+                <button class="trigger" value="row-reverse">Row-Reverse</button>
+                <button class="trigger" value="column-reverse">Column-Reverse</button>
+            </div>
+
+            <div id="flexibility">
+                <h2>Responsive content management</h2>
+                <button class="trigger" value="wrap">Wrap</button>
+                <button class="trigger" value="nowrap">Nowrap</button>
+            </div>
+
+            <div class="concl">
+                    <h2>Content First</h2>
+                    <p>If you want your content to be aligned in a lightweight, dynamic way, go for Flexbox.</p>
+                    <p>Flex-wrap can mimic a table, but when they wrap, each line becomes a flex container of its own - won’t look at placement of previous elements even if they’re hard-coded together.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>Jalia Evans &copy; 2019</h2>
+    </footer>
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
